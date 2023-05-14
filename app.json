@@ -2,9 +2,13 @@
   "expo": {
     "scheme": "acme",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "output": "static"
     },
     "name": "instagram-layout",
-    "slug": "instagram-layout"
+    "slug": "instagram-layout",
+    "experiments": {
+      "tsconfigPaths": true
+    }
   }
 }
