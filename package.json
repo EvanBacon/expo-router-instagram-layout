@@ -6,7 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "expo export -p web",
-    "deploy": "vercel build --prod && vercel deploy --prebuilt"
+    "deploy": "vercel build && vercel deploy --prebuilt"
   },
   "dependencies": {
     "@types/react": "^18.2.6",
