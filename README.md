@@ -7,6 +7,8 @@ Use [`expo-router`](https://expo.github.io/router) to build universally responsi
 
 Check out the [web demo here](https://expo-instagram-layout.netlify.app/). Pull the app and run in Expo Go to see the results on native.
 
+Check out [this sandbox](https://codesandbox.io/p/sandbox/github/EvanBacon/expo-router-instagram-layout) to edit the code inside your browser.
+
 ### Responsive
 
 A tab navigator that works well in landscape or portrait mode, same code used across web and native.
