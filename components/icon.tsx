@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleProp, ViewStyle } from "react-native";
 
 const icons = require.context("../assets/icons");
 
@@ -20,7 +21,7 @@ export function Icon({
 }: {
   name: IconName;
   fill: string;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   width?: number;
   height?: number;
 }) {
