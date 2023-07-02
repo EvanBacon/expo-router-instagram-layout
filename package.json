@@ -1,5 +1,5 @@
 {
-  "main": "node_modules/expo-router/entry",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
