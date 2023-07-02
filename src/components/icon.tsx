@@ -1,6 +1,6 @@
 import React from "react";
 
-const icons = require.context("../assets/icons");
+const icons = require.context("../../assets/icons");
 
 export type IconName =
   | "logo"
