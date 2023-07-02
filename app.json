@@ -9,7 +9,8 @@
     "name": "instagram-layout",
     "slug": "instagram-layout",
     "experiments": {
-      "tsconfigPaths": true
+      "tsconfigPaths": true,
+      "typedRoutes": true
     }
   }
 }

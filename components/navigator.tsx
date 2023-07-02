@@ -14,6 +14,13 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+const cns = (
+  ...classes: (string | false | undefined | null)[]
+): Record<string, any> => ({
+  $$css: true,
+  _: classes.filter(Boolean).join(" ") as unknown as string[],
+});
+
 function HeaderLogo() {
   const isLargeHorizontal = useWidth(1264);
   const isSmallHorizontal = useWidth(768);
@@ -31,7 +38,7 @@ function HeaderLogo() {
               paddingBottom: 23,
               height: 96,
             },
-          web: cssStyles.headerLink,
+          web: cns(cssStyles.headerLink),
         }),
       ]}
       href="/"
@@ -50,7 +57,7 @@ function HeaderLogo() {
             <Icon
               style={Platform.select({
                 default: !isLargeHorizontal && { display: "none" },
-                web: cssStyles.wideVisible,
+                web: cns(cssStyles.wideVisible),
               })}
               name="logo"
               fill={Colors.dark}
@@ -58,7 +65,7 @@ function HeaderLogo() {
             <Icon
               style={Platform.select({
                 default: isLargeHorizontal && { display: "none" },
-                web: cssStyles.wideHidden,
+                web: cns(cssStyles.wideHidden),
               })}
               name="logo-small"
               fill={Colors.dark}
@@ -99,7 +106,7 @@ function SideBar({ visible }) {
             },
           ],
 
-          web: [cssStyles.largeVisible, cssStyles.sideBar],
+          web: [cns(cssStyles.largeVisible, cssStyles.sideBar)],
         }),
       ]}
     >
@@ -115,7 +122,7 @@ function SideBar({ visible }) {
                   alignItems: "flex-start",
                 } as const),
             ],
-            web: [cssStyles.sideBarInner],
+            web: [cns(cssStyles.sideBarInner)],
           }),
         ]}
       >
@@ -127,7 +134,7 @@ function SideBar({ visible }) {
               default: !isLarge && {
                 alignItems: "center",
               },
-              web: cssStyles.sideBarHeader,
+              web: cns(cssStyles.sideBarHeader),
             }),
           ]}
         >
@@ -164,7 +171,7 @@ function TabBar({ visible }) {
           default: {
             display: visible ? "flex" : "none",
           },
-          web: cssStyles.smallVisible,
+          web: cns(cssStyles.smallVisible),
         }),
       ]}
     >
@@ -309,7 +316,7 @@ function SideBarTabItem({
                 default: {
                   display: isLarge ? "flex" : "none",
                 },
-                web: cssStyles.sideBarTabItemText,
+                web: cns(cssStyles.sideBarTabItemText),
               }),
               focused && {
                 fontWeight: "bold",
@@ -342,7 +349,7 @@ export function ResponsiveNavigator() {
             default: {
               flexDirection: isRowLayout ? "row" : "column",
             },
-            web: cssStyles.container,
+            web: cns(cssStyles.container),
           }),
         ]}
       >
@@ -367,7 +374,7 @@ function AppHeader({ visible }) {
             default: !visible && {
               display: "none",
             },
-            web: cssStyles.smallVisible,
+            web: cns(cssStyles.smallVisible),
           }),
           { height, paddingTop: top },
           jsStyles.appHeader,
